@@ -84,7 +84,7 @@
       </ul>
     </section>
 
-    <hr class="w-1/2 mx-auto bg-slate-900 dark:bg-slate-50">
+    <hr class="w-1/2 mx-auto border border-solid bg-slate-900 dark:bg-slate-50">
 
     <section id="testimonials" class="p-6 my-12 scroll-mt-20">
       <h2 class="mb-6 text-4xl font-bold text-center sm:text-5xl text-slate-900 dark:text-slate-100">Testimonials</h2>
@@ -129,8 +129,18 @@
 
     <hr class="w-1/2 mx-auto bg-slate-900 dark:bg-slate-50">
 
-    <section id="contact" class="p-6 my-12">
+    <section id="contact" class="p-6 my-12 scroll-smooth scroll-mt-20">
       <h2 class="mb-6 text-4xl font-bold text-center sm:text-5xl text-slate-900 dark:text-slate-100">Contact Us</h2>
+      <form action="" class="flex flex-col items-start max-w-4xl gap-4 mx-auto text-2xl sm:text-3xl">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" placeholder="Your Subject" required minlength="3" maxlength="60"
+          class="w-full p-3 text-2xl text-black border border-solid sm:text-3xl border-slate-900 dark:border-none rounded-xl">
+        <label for="message">Message:</label>
+        <textarea name="" id="message" cols="30" rows="10" required placeholder="Your Message"
+          class="w-full p-3 text-2xl text-black border border-solid sm:text-3xl border-slate-900 dark:border-none rounded-xl"></textarea>
+        <button
+          class="w-48 p-3 text-2xl text-white bg-teal-700 border border-solid hover:bg-teal-600 active:bg-teal-300 rounded-xl border-slate-900 dark:border-none ">Submit</button>
+      </form>
     </section>
   </main>
 
