@@ -10,7 +10,7 @@
 </head>
 
 <body class="min-h-screen bg-slate-200 dark:bg-slate-900 dark:text-slate-100">
-  <header class="sticky top-0 z-10 bg-teal-700 text-slate-100">
+  <header class="sticky top-0 z-10 bg-teal-600 text-slate-100">
     <section class="flex items-center justify-between max-w-4xl p-4 mx-auto">
       <h1 class="text-3xl font-medium">
         <a href="#hero">🚀 Acme Rocket</a>
@@ -20,11 +20,12 @@
           <!-- toggle -->
           <div class="relative">
             <!-- input -->
-            <input type="checkbox" id="toggleDark" class="sr-only" value="dark">
+            <input type="checkbox" id="toggleDark" class="sr-only">
             <!-- line -->
-            <div class="block h-8 bg-gray-600 rounded-full w-14"></div>
+            <div class="block h-8 rounded-full bg-slate-50 line w-14"></div>
             <!-- dot -->
-            <div class="absolute w-6 h-6 transition bg-white rounded-full dot left-1 top-1"></div>
+            <div class="absolute w-6 h-6 transition bg-teal-600 rounded-full dot left-1 top-1">
+            </div>
           </div>
         </label>
         <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
@@ -139,10 +140,32 @@
         <textarea name="" id="message" cols="30" rows="10" required placeholder="Your Message"
           class="w-full p-3 text-2xl text-black border border-solid sm:text-3xl border-slate-900 dark:border-none rounded-xl"></textarea>
         <button
-          class="w-48 p-3 text-2xl text-white bg-teal-700 border border-solid hover:bg-teal-600 active:bg-teal-300 rounded-xl border-slate-900 dark:border-none ">Submit</button>
+          class="w-48 p-3 text-2xl text-white bg-teal-600 border border-solid hover:bg-teal-500 active:bg-teal-400 rounded-xl border-slate-900 dark:border-none ">Submit</button>
       </form>
     </section>
   </main>
+
+  <footer class="bg-teal-700 text-slate-100">
+    <section id="footer"
+      class="flex flex-col items-center justify-center max-w-4xl gap-8 p-4 mx-auto text-xl sm:flex-row sm:justify-between sm:items-start">
+      <address>
+        <h2>Acme Rocket-Powered Products, Inc.</h2>
+        555 Astro Way<br>
+        Fairfield, New Jersey 12345-5555<br>
+        Email: <a href="mailto:inquiries@acmerockets.com">Inquires@AcmeRockets.com</a><br>
+        Phone: <a href="tel:+15555555555">(555) 555-5555</a>
+      </address>
+      <nav class="flex-col hidden gap-2 sm:flex" aria-label="footer">
+        <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
+        <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
+        <a href="#contact" class="hover:opacity-90">Contact Us</a>
+      </nav>
+      <div class="flex flex-col gap-2">
+        <p class="text-right">Copyright &copy; <span id="year">2022</span></p>
+        <p class="text-right">All Rights Reserved</p>
+      </div>
+    </section>
+  </footer>
 
   <script src="/build/index.js"></script>
 </body>
