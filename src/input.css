@@ -11,3 +11,9 @@
     background-color: #334155;
   }
 }
+
+@layer utilities {
+  .section-min-height {
+    min-height: calc(100vh - 68px);
+  }
+}
