@@ -28,12 +28,26 @@
             </div>
           </div>
         </label>
-        <button id="hamburger-button" class="relative w-8 cursor-pointer md:hidden h8">
-          <!-- ☰ -->
-          <div
-            class="bg-white w-8 h-1 rounded absolute top-4 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3">
-          </div>
-        </button>
+        <div class="relative py-3 mx-auto sm:max-w-xl">
+          <nav x-data="{ open: false }">
+            <button id="hamburger-button" class="relative rounded w-14 h-14 focus:outline-none" @click="open = !open">
+
+              <div
+                class="absolute block w-5 transition duration-500 ease-in-out transform -translate-x-1/2 -translate-y-1/2 left-6 top-1/2"
+                :class="{'-rotate-180': open,'': !open }">
+                <span
+                  class="block absolute h-0.5 w-7 text-white bg-current transform transition duration-500 ease-in-out"
+                  :class="{'rotate-45': open,' -translate-y-1.5': !open }"></span>
+                <span
+                  class="block absolute  h-0.5 w-5 text-white bg-current   transform transition duration-500 ease-in-out"
+                  :class="{'opacity-0': open } "></span>
+                <span
+                  class="block absolute  h-0.5 w-7 text-white bg-current transform  transition duration-500 ease-in-out"
+                  :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
+              </div>
+            </button>
+          </nav>
+        </div>
         <nav class="hidden space-x-8 text-xl md:block" aria-label="main">
           <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
           <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
@@ -42,7 +56,7 @@
       </div>
     </section>
     <section id="mobile-menu"
-      class="absolute flex-col justify-center hidden w-full text-3xl origin-top top-68 bg-emerald-600 dark:bg-zinc-900 animate-open-menu">
+      class="absolute flex-col justify-center hidden w-full text-3xl origin-top top-68 bg-slate-50 text-slate-900 dark:bg-zinc-900 dark:text-slate-100 animate-open-menu">
       <!-- <button id="hamburger-button" class="self-end p-4 text-5xl">⨉</button> -->
       <nav class="flex flex-col items-center min-h-screen gap-10 py-10" aria-label="mobile">
         <a href="#hero" class="hover:opacity-90">Home</a>
@@ -183,6 +197,8 @@
     </section>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
     integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
   <script src="/build/index.js" defer></script>
