@@ -648,6 +648,11 @@ input:checked ~ .line {
   width: 1.5rem;
 }
 
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .w-5 {
   width: 1.25rem;
 }
@@ -1260,6 +1265,10 @@ input:checked ~ .line {
 @media (min-width: 768px) {
   .md\:block {
     display: block;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 }
 
